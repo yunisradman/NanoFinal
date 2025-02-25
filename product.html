@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض تفاصيل بعض أنظمتنا</title>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /><!-- Swiper CSS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- Swiper JS -->
+<link rel="stylesheet" href="./css/style-p.css"> 
+    <script defer src="./js/script-p.js"></script> 
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h2>تفاصيل اكثر عن بعض أنظمتنا</h2>
+            <button class="btn-back"><a href="index.html">عودة للصفحة الرئيسية</a></button>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="products-list">
+            <h3>اختر النظام الذي ترغب في عرض تفاصيل عنه</h3>
+            <select id="product-select">
+                <option value="">-- اختر منتجًا --</option>
+                <option value="smarter-pro">Nano Smarter Pro النظام المحاسبي سمارتر برو</option>
+                <option value="pharmacy">نظام الصيدليات Nano Pharmacy</option>
+                <option value="nano-web">نظام الويب المحاسبي Nano Web Accounting</option>
+                <option value="smarter">النظام المحاسبي Smarter</option>
+                <option value="school">نظام المدارس Nano School</option>
+                <option value="counters">نظام إدارة محطات المياه والكهرباء Nano Counters</option>
+                <option value="medical">نظام المراكز الطبية Nano Medical Centers</option>
+            </select>
+        </section>
+
+        <section class="product-details" id="product-details">
+            <!-- عرض تفاصيل المنتج هنا عبر JavaScript -->
+        </section>
+    </main>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./images/mobeen (2).png" alt="Product Image 1">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/alsalam-general.png" alt="Product Image 1">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/Maqtary-01.JPG" alt="Product Image 1">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/Brochures/pharmacy-page2.jpg" alt="Product Image 1">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/Brochures/smarter-page2.jpeg" alt="Product Image 1">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/pharmacy-02.png" alt="Product Image 1">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/nanoweb-main.png" alt="Product Image 2">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/pharmacy-invoice.png" alt="Product Image 3">
+            </div>
+        </div>
+        <!-- Navigation buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>© 2025 نانو للحلول النهائية.</p>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
+</html>
