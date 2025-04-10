@@ -10,25 +10,53 @@
     <script defer src="./js/script-p.js"></script> 
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h2>تفاصيل اكثر عن بعض أنظمتنا</h2>
-            <button class="btn-back"><a href="index.html">عودة للصفحة الرئيسية</a></button>
-        </div>
-    </header>
-    
+
+  
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="navbar.html" class="navbar-logo">نانو للحلول النهائية</a>
+
+    <button class="navbar-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+    <ul class="navbar-menu">
+        <li><a href="index.html" class="active">الصفحة الرئيسية</a></li>
+        <li><a href="index.html">عن الشركة</a></li>
+        <li><a href="index.html">خدماتنا</a></li>
+        <li><a href="index.html">منتجاتنا</a></li>
+        <li><a href="index.html">صفحات اخرى</a></li>
+        
+        <li>
+            <select>
+                <option value="Ar" selected>عربي</option>
+                <option value="En">English</option>
+            </select>
+        </li>
+    </ul>
+</div>
+</nav>  
+
+<header>
+    <div class="container">
+        <h2>تفاصيل اكثر عن بعض أنظمتنا</h2>
+        <button class="btn-back"><a href="index.html">عودة للصفحة الرئيسية</a></button>
+    </div>
+</header>
+
     <main class="container">
         <section class="products-list">
             <h3>اختر النظام الذي ترغب في عرض تفاصيل عنه</h3>
             <select id="product-select">
                 <option value="">-- اختر منتجًا --</option>
-                <option value="smarter-pro">Nano Smarter Pro النظام المحاسبي سمارتر برو</option>
-                <option value="pharmacy">نظام الصيدليات Nano Pharmacy</option>
-                <option value="nano-web">نظام الويب المحاسبي Nano Web Accounting</option>
-                <option value="smarter">النظام المحاسبي Smarter</option>
-                <option value="school">نظام المدارس Nano School</option>
-                <option value="counters">نظام إدارة محطات المياه والكهرباء Nano Counters</option>
-                <option value="medical">نظام المراكز الطبية Nano Medical Centers</option>
+                <option value="smarter-pro"> (Nano Smarter Pro)النظام المحاسبي سمارتر برو</option>
+                <option value="pharmacy">نظام الصيدليات - نانو فارمسي (Nano Pharmacy)</option>
+                <option value="nano-web">نظام الويب المحاسبي (Nano Web Accounting)</option>
+                <option value="smarter">النظام نانو سمارتر (Smarter)</option>
+                <option value="school">نظام المدارس (Nano School)</option>
+                <option value="counters">نظام إدارة محطات المياه والكهرباء (Nano Counters)</option>
+                <option value="medical">نظام المراكز الطبية (Nano Medical Centers)</option>
             </select>
         </section>
 
@@ -74,6 +102,9 @@
     </footer>
 
     <!-- Swiper JS -->
+     <script src="./js/script-p.js"></script>
+     <script src="script-nav.js"></script>  
+
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>
