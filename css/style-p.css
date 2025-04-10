@@ -10,6 +10,7 @@ html,body {
     line-height: 1.4;
     align-items: center;
     overflow-x: hidden;
+    box-sizing: border-box; min-height: 10vh;
 }
 html {
     font-size: 16px; /* Base font size for PCs */
@@ -23,7 +24,7 @@ html {
 }
 
 header {
-    width: 100%;
+    width: 100%;margin-top: 10px;
     background-color: #006370;
     color: #fff;
     padding: 10px 0;
@@ -58,10 +59,10 @@ header h1 {
 #product-select {
     width: 100%;
     padding: 10px;
-    font-size: 1rem;font-weight: bold;
+    font-size: 1.2rem;font-weight:bold;font-family:'Courier New', Courier, monospace;
     border: 2px solid #e07d19;
     border-radius: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 5px;color:#006370;
     background-color: #f7f8fc;
     cursor: pointer;
     align-items: center;
@@ -82,7 +83,7 @@ header h1 {
 .product-info {
     display: flex;
     flex-direction: column; /* description above, then images below */
-    gap: 20px;
+    gap: 5px;
     align-items: flex-start;
     width: 100%;
     box-sizing: border-box;
@@ -100,7 +101,7 @@ header h1 {
 }
 .product-description p {
     margin-bottom: 11px;
-    font-size: 1.1rem; /* 17.6px on PCs */
+    font-size: 1rem; /* 17.6px on PCs */
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -308,4 +309,83 @@ footer p {
         word-wrap: break-word; /*Allow Long Text to Wrap to a New Line */
         text-align: right;
     }
+}
+
+.navbar{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:80px;width:100%;
+    position:sticky; top:0;
+    background-color: #006370;border-radius: 5px;
+    box-shadow: 0 10px 20px rgb(0,0,0,0.5);
+    backdrop-filter:blur(10px);
+    z-index: 999; /* top on other elements */
+}
+.navbar-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    padding: 0 2rem;
+    max-width: 1600px;
+}
+.navbar-logo{
+    font-size: 2rem;
+    font-weight: 500;color: #fff;
+    text-decoration: none;cursor: pointer;
+}
+.navbar-container .navbar-menu{
+    display: none;
+    display: flex;text-align: center;
+    gap:1.5rem;list-style: none; 
+}
+.navbar-container .navbar-menu li a{
+    text-decoration: none;color: #fff;font-size: 1.3rem;font-weight: 500;
+padding: 3px 20px; border-radius: 20px; border: 2px solid transparent;
+transition: all 0.7s ease;
+white-space: nowrap;
+}
+.navbar-container .navbar-menu li a:hover,
+.navbar-container .navbar-menu li a.active{
+    color:#006370; background:#e07d19;
+    border:2px solid #e07d19;
+}
+
+.navbar-container .navbar-menu.active{display: flex;}
+
+.navbar-toggle{
+    display: none;
+    background: transparent;padding:10px;
+    border:none;cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;height: 3px;margin:5px auto;background: #fff;
+    transition:all 0.3s ease-in-out;
+}
+@media(max-width:880px){
+    .navbar{ backdrop-filter: none; }
+    .navbar-container .navbar-menu{
+        display: none;
+     flex-direction: column; align-items: flex-start;
+     gap:1.7rem !important; position: absolute;
+     height: 100vh;width: 250px; top:0; right: 0;
+    padding: 5rem 1.5rem; box-shadow: 0 10px 10px rgb(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+  }
+.navbar-toggle{display: block; z-index: 999;}
+.navbar-toggle.active .bar:nth-child(2){opacity: 0;}
+.navbar-toggle.active .bar:nth-child(1) {
+         transform: translateY(8px) rotate(45deg); 
+    }
+.navbar-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg); 
+   }
+}
+@media (max-width:480px){
+    .navbar-container{padding: 0 1rem;}
+    .navbar-logo{font-size: 1.7rem;}
+    .navbar-container .navbar-menu li a{
+     font-size: 1.2rem; padding: 3px 15px}
 }
