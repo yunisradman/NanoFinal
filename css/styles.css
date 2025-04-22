@@ -191,8 +191,8 @@ color:#e07d19 ;
   padding: 1.5rem;
   background-color: #f8f7fc;
 }
-.features-section h2 {
-  margin: 0 auto 20px;     
+.features-section h1 {
+  margin-top: 10px; 
   padding: 0.7rem 1rem; 
   color: #fff;
   font-weight: 800;
@@ -233,20 +233,29 @@ color:#e07d19 ;
 }
 
 .quality p {
-  font-size: 1.8rem; /* Adjusted for smaller screens */
-  color: #555;
-  text-align: center;
+  font-size: 1.8rem;
+  color: #020008;
+  line-height: 1.8;
+  margin-bottom: 20px;
 }
 
 /* Services Section */
 
 .services-section {
-  max-width: 1400;
-  margin: 0 auto;
+  max-width: 1400px;
+  margin: 0 auto;  padding: 5px 5px;
   text-align: center;
+  background-color: #f8f7fcc4;
+}
+.services {
+  padding: 20px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
   background-color: #f8f7fc;
 }
-.services-container {
+.services h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
@@ -281,13 +290,13 @@ color:#e07d19 ;
   color: #006370;
 }
 .service p {
-  font-size: 1.7rem;
-  color: #555;
+  font-size: 2.1rem;
+  color: #020008;
   line-height: 1.8;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
-.products-section h2, 
-.services-section h2
+.products-section h1, 
+.services-section h1
  {
   margin: 0 auto 20px; 
   padding: 0.7rem 1rem;
@@ -348,8 +357,8 @@ color:#e07d19 ;
   color: #006370;
 }
 .system p {
-  font-size: 1.7rem;
-  color: #555;
+  font-size: 2.1rem;
+  color: #020008;
   line-height: 1.8;
   margin-bottom: 20px;
 }
@@ -385,17 +394,18 @@ color:#e07d19 ;
   margin-top: 10px;
 }
 .footer h4 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: bold;
   margin-bottom: 10px;
   text-align: right;
 }
-.footer p{font-size: 1.5rem; font-family:sans-serif}
+.footer p{font-size: 1.7rem; font-family:sans-serif}
+.footer .quick-links{padding-right: 20px;}
 .quick-links a {
   color: #e5e5e5;
-  font-size: 1.5rem;text-decoration: none;
+  font-size: 1.8rem;text-decoration: none;
 }
-.footer .quick-links{padding-right: 20px;}
+.footer .contact-info{padding-right: 20px;}
 .quick-links a:hover {
   color: #e07d19;
 }
@@ -417,12 +427,12 @@ color:#e07d19 ;
   margin: 0;padding-top:1rem;
   text-align: center;
 }
-.footer-bottom p{font-style:normal;}
+.footer-bottom p{font-style:normal; font-size: 1.7rem;}
 /* Responsive Design */
 
 @media (max-width: 868px) {
-  .footer h4 { font-size: 1.6rem;text-align: center;}
-  .footer p { font-size: 1.2rem;  }
+  .footer h4 { font-size: 1.9rem;text-align: center;}
+  .footer p { font-size: 1.5rem;  }
   .footer .social-icons,.contact-info,.quick-links{padding-top: 15px;text-align: center;}
   .footer .social-icons a {  font-size: 1.5rem;   }
   .footer .quick-links li a{font-size: 1.3rem;}
@@ -436,7 +446,7 @@ color:#e07d19 ;
   }
 }
 /* Responsive Services section 480 max */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .services-section
   .products-section
   {
@@ -458,7 +468,7 @@ color:#e07d19 ;
   }
 }
 /* Media Queries for Responsiveness  Features*/
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .features-section {
     padding: 0 2rem; /* Reduce padding for smaller screens */
   }
@@ -470,14 +480,14 @@ color:#e07d19 ;
     font-size: 2rem;
   }
   .quality h3 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
   .quality p {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 678px) {
   .quality {
     width: 100%; /* 1 item per row */
     margin: 0.5rem 0; /* Reduce margin for smaller screens */
@@ -486,10 +496,10 @@ color:#e07d19 ;
     font-size: 1.8rem;
   }
   .quality h3 {
-    font-size: 1.5rem;
+    font-size: 2.1rem;
   }
   .quality p {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
   }
 }
 
