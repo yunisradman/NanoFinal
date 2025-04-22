@@ -108,11 +108,6 @@ color:#e07d19 ;
   align-items: center;
 }
 
-/* .custom-heading {
-  max-width: 1400px;
-  margin: 0 auto; /* Center the element 
-} */
-
 .qualities {
   display: flex;
   flex-wrap: wrap; /* Allow items to wrap on smaller screens */
@@ -120,7 +115,18 @@ color:#e07d19 ;
   padding: 1.5rem;
   background-color: #f8f7fc;
 }
-
+.features-section h2 {
+  margin: 0 auto 20px;     
+  padding: 0.7rem 1rem; 
+  color: #fff;
+  font-weight: 800;
+  background-color: #006370;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;           /
+          
+  box-sizing: border-box;
+}
 .quality {
   background-color: #e6e8f1;
   padding: 2.5rem;
@@ -161,7 +167,7 @@ color:#e07d19 ;
 /* Services Section */
 
 .services-section {
-  max-width: 1400px;
+  max-width: 1400;
   margin: 0 auto;
   text-align: center;
   background-color: #f8f7fc;
@@ -209,26 +215,13 @@ color:#e07d19 ;
 .products-section h2, 
 .services-section h2
  {
-  margin-bottom: 20px;
-  padding: 0.7rem;
-  color: #fff;
-  font-weight: 800;
-  background-color: #006370;
-  border-radius: 5px;
+  margin: 0 auto 20px; 
+  padding: 0.7rem 1rem;
+  color: #fff;font-weight: 800;background-color: #006370;
+  border-radius: 5px;   /* width: fit-content;  */
   text-align: center;
-  display: flex;
-  justify-content: center;
-}
-.features-section h2{
-  margin-bottom: 20px;margin-top: 5px;;
-  padding: 0.7rem .2rem; 
-  width: 100%;     
-  color: #fff;font-weight: 800;
-  background-color: #006370;
-  border-radius: 5px;
-  text-align: center; 
-  display: flex; 
-  justify-content: center;
+  max-width: 98%; 
+  box-sizing: border-box;
 }
 .products-section {
   max-width: 1400px;
