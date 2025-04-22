@@ -171,18 +171,20 @@ color:#e07d19 ;
   flex-wrap: wrap;
   gap: 40px;
   justify-content: center;
-  padding-bottom: 20px;
+  padding: 20px 10px;
 }
+
 .service {
   background-color: #e6e8f1;
   border: 1px solid #006370;
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 12px;
+  padding: 25px;
   width: calc(33.333% - 40px);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .service:hover {
   transform: translateY(-10px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
