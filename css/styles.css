@@ -11,9 +11,15 @@
 }
 body {
   line-height: 1.6;
-
+  width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+  border: 1px solid red !important;
 }
-
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
 .btn a{
   background-color:#006370; padding:0.2rem 2rem;text-decoration: none;
   font-size: 15px;font-weight: bold;color: white;border-radius: 3px;}
@@ -102,10 +108,10 @@ color:#e07d19 ;
   align-items: center;
 }
 
-.custom-heading {
+/* .custom-heading {
   max-width: 1400px;
-  margin: 0 auto; /* Center the element */
-}
+  margin: 0 auto; /* Center the element 
+} */
 
 .qualities {
   display: flex;
@@ -213,7 +219,8 @@ color:#e07d19 ;
 }
 .features-section h2{
   margin-bottom: 20px;margin-top: 5px;;
-  padding: 0.7rem 67.5rem;          /* wrong behavior modify it later*/
+  padding: 0.7rem .2rem; 
+  width: 100%;     
   color: #fff;font-weight: 800;
   background-color: #006370;
   border-radius: 5px;
@@ -382,8 +389,9 @@ color:#e07d19 ;
 }
 /* Media Queries for Responsiveness  Features*/
 @media (max-width: 1200px) {
+
   .quality {
-    width: calc(33.33% - 2rem); /* 3 items per row */
+    width: 100%; /* بدلاً من calc(20% - 2rem) */
   }
 }
 @media (max-width: 768px) {
