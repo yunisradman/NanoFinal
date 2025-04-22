@@ -25,6 +25,82 @@ html, body {
   font-size: 15px;font-weight: bold;color: white;border-radius: 3px;}
 .btn a:hover{color:#e07d19; }
 
+.navbar{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height:80px;width:100%;
+  position:sticky; top:0;
+  background: #006370;
+  box-shadow: 0 10px 20px rgb(0,0,0,0.5);
+  backdrop-filter:blur(10px);
+  z-index: 999; /* top on other elements */
+}
+.navbar-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width:100%;
+  padding: 0 2rem;
+  max-width: 1400px;
+}
+
+.logo .navbar-name{
+  font-size: 3rem;padding-right: 20px;
+  font-weight: bold;color: #fff;
+  text-decoration: none;
+}
+.navbar-container .navbar-menu{
+  display: none;
+  display: flex;text-align: center;
+  gap:1.5rem;list-style: none; 
+}
+.navbar-container .navbar-menu li a{
+  text-decoration: none;font-size: 2rem;font-weight: bold;
+padding: 3px 20px; border-radius: 20px; border: 2px solid transparent;
+transition: all 0.7s ease;color: #fff;
+white-space: nowrap;
+}
+.navbar-container .navbar-menu li a:hover,
+.navbar-container .navbar-menu li a.active{
+  color:#000; background:#e07d19;
+  border:2px solid #e07d19;
+}
+
+.navbar-container .navbar-menu.active{display: flex;}
+
+.navbar-toggle{
+  display: none;
+  background-color: #21c2d7;padding:10px;
+  border:none;cursor: pointer;
+}
+.bar{
+  display: block;
+  width: 25px;height: 3px;margin:5px auto;background: #fff;
+  transition:all 0.3s ease-in-out;
+}
+@media(max-width:1030px){
+  .navbar{ backdrop-filter: none; }
+  .navbar-container .navbar-menu{
+      display: none;color: #555;
+   flex-direction: column; align-items: flex-start;
+   gap:1.7rem !important; position: absolute;
+   height: 55vh;width: 250px; top:0; right: 0;
+  padding: 5rem 1.5rem; box-shadow: 0 10px 10px rgb(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+}
+.navbar-container .navbar-menu li a{background-color: rgb(42, 81, 81);font-size: 1.7rem;}              
+.navbar-toggle{display: block; z-index: 999;}
+.navbar-toggle.active .bar:nth-child(2){opacity: 0;}
+.navbar-toggle.active .bar:nth-child(1) {transform: translateY(8px) rotate(45deg);}
+.navbar-toggle.active .bar:nth-child(3) {transform: translateY(-8px) rotate(-45deg); }
+}
+@media (max-width:480px){
+  .navbar-container{padding: 0 1rem;}
+  .navbar-name{font-size: 1.4rem;}
+  .navbar-container .navbar-menu li a{
+   font-size: 1.2rem; padding: 3px 15px}
+}
 
 
 /* Carousel Styling */
@@ -123,9 +199,7 @@ color:#e07d19 ;
   background-color: #006370;
   border-radius: 5px;
   text-align: center;
-  width: 100%;           /
-          
-  box-sizing: border-box;
+  width: 100%;           /   
 }
 .quality {
   background-color: #e6e8f1;
@@ -207,7 +281,7 @@ color:#e07d19 ;
   color: #006370;
 }
 .service p {
-  font-size: 16px;
+  font-size: 1.7rem;
   color: #555;
   line-height: 1.8;
   margin-bottom: 10px;
@@ -274,7 +348,7 @@ color:#e07d19 ;
   color: #006370;
 }
 .system p {
-  font-size: 16px;
+  font-size: 1.7rem;
   color: #555;
   line-height: 1.8;
   margin-bottom: 20px;
@@ -358,6 +432,7 @@ color:#e07d19 ;
   .service,
   .system {
     flex: 1 1 100%;
+    font-size: 1.5rem;
   }
 }
 /* Responsive Services section 480 max */
@@ -383,13 +458,7 @@ color:#e07d19 ;
   }
 }
 /* Media Queries for Responsiveness  Features*/
-@media (max-width: 1200px) {
-
-  .quality {
-    width: 100%; /* بدلاً من calc(20% - 2rem) */
-  }
-}
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .features-section {
     padding: 0 2rem; /* Reduce padding for smaller screens */
   }
@@ -404,9 +473,10 @@ color:#e07d19 ;
     font-size: 1.6rem;
   }
   .quality p {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
+
 @media (max-width: 480px) {
   .quality {
     width: 100%; /* 1 item per row */
@@ -416,10 +486,10 @@ color:#e07d19 ;
     font-size: 1.8rem;
   }
   .quality h3 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
   .quality p {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -428,79 +498,3 @@ color:#e07d19 ;
 
 
 
-.navbar{
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  height:80px;width:100%;
-  position:sticky; top:0;
-  background: #006370;
-  box-shadow: 0 10px 20px rgb(0,0,0,0.5);
-  backdrop-filter:blur(10px);
-  z-index: 999; /* top on other elements */
-}
-.navbar-container{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width:100%;
-  padding: 0 2rem;
-  max-width: 1400px;
-}
-
-.logo .navbar-name{
-  font-size: 3rem;padding-right: 20px;
-  font-weight: bold;color: #fff;
-  text-decoration: none;
-}
-.navbar-container .navbar-menu{
-  display: none;
-  display: flex;text-align: center;
-  gap:1.5rem;list-style: none; 
-}
-.navbar-container .navbar-menu li a{
-  text-decoration: none;font-size: 2rem;font-weight: bold;
-padding: 3px 20px; border-radius: 20px; border: 2px solid transparent;
-transition: all 0.7s ease;color: #fff;
-white-space: nowrap;
-}
-.navbar-container .navbar-menu li a:hover,
-.navbar-container .navbar-menu li a.active{
-  color:#000; background:#e07d19;
-  border:2px solid #e07d19;
-}
-
-.navbar-container .navbar-menu.active{display: flex;}
-
-.navbar-toggle{
-  display: none;
-  background-color: #21c2d7;padding:10px;
-  border:none;cursor: pointer;
-}
-.bar{
-  display: block;
-  width: 25px;height: 3px;margin:5px auto;background: #fff;
-  transition:all 0.3s ease-in-out;
-}
-@media(max-width:880px){
-  .navbar{ backdrop-filter: none; }
-  .navbar-container .navbar-menu{
-      display: none;color: #555;
-   flex-direction: column; align-items: flex-start;
-   gap:1.7rem !important; position: absolute;
-   height: 55vh;width: 250px; top:0; right: 0;
-  padding: 5rem 1.5rem; box-shadow: 0 10px 10px rgb(0,0,0,0.5);
-  backdrop-filter: blur(10px);
-}
-.navbar-container .navbar-menu li a{background-color: rgb(42, 81, 81);font-size: 1.7rem;}              
-.navbar-toggle{display: block; z-index: 999;}
-.navbar-toggle.active .bar:nth-child(2){opacity: 0;}
-.navbar-toggle.active .bar:nth-child(1) {transform: translateY(8px) rotate(45deg);}
-.navbar-toggle.active .bar:nth-child(3) {transform: translateY(-8px) rotate(-45deg); }
-}
-@media (max-width:480px){
-  .navbar-container{padding: 0 1rem;}
-  .navbar-name{font-size: 1.7rem;}
-  .navbar-container .navbar-menu li a{
-   font-size: 1.2rem; padding: 3px 15px}
-}
